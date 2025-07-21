@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bike Spare Parts</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card a {
+      text-decoration: none;
+      color: #007BFF;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bike Spare Parts</h1>
+  <div class="card-container">
+    <div class="card">
+      <a href="https://shop.hondabigwing.in/" target="_blank">Honda Genuine Parts</a>
+    </div>
+    <div class="card">
+      <a href="https://www.tvsmotor.com/spares" target="_blank">TVS Spare Parts</a>
+    </div>
+    <div class="card">
+      <a href="https://www.bajajauto.com/spare-parts" target="_blank">Bajaj Spare Parts</a>
+    </div>
+    <div class="card">
+      <a href="https://www.yamaha-motor-india.com/spare-parts.html" target="_blank">Yamaha Spare Parts</a>
+    </div>
+    <div class="card">
+      <a href="https://www.royalenfield.com/in/en/gma/" target="_blank">Royal Enfield Accessories</a>
+    </div>
+    <div class="card">
+      <a href="https://shop.hero-motocorp.com/" target="_blank">Hero Genuine Accessories</a>
+    </div>
+  </div>
+  <div style="text-align: center; margin-top: 20px;">
+    <a href="{{ url_for('index') }}">← Back to Home</a>
+  </div>
+</body>
+</html>

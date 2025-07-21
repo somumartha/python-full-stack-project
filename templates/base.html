@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head><title>{{ title }}</title></head>
+<body>
+<nav>
+    <ul>
+        {% if page == 'cars' %}
+            <li><a href="{{ url_for('dashboard') }}">Home</a></li>
+            <li><a href="{{ url_for('carspares') }}">Car Spares</a></li>
+        {% elif page == 'bikes' %}
+            <li><a href="{{ url_for('dashboard') }}">Home</a></li>
+            <li><a href="{{ url_for('bikespares') }}">Bike Spares</a></li>
+        {% elif page == 'carspares' or page == 'bikespares' %}
+            <li><a href="{{ url_for('dashboard') }}">Home</a></li>
+        {% endif %}
+    </ul>
+</nav>
+{% block content %}{% endblock %}
+</body>
+</html>

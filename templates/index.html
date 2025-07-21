@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Main Page</title>
+  <link rel="stylesheet" type="text/css" href="/static/style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image: url("/static/background.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    ul {
+      list-style-type: none;
+      background-color: black;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      height: 60px;
+    }
+
+    li {
+      float: right;
+      padding: 14px 16px;
+      font-size: larger;
+      font-weight: bold;
+    }
+
+    li:hover {
+      background-color: grey;
+    }
+
+    li a {
+      text-decoration: none;
+      color: white;
+    }
+
+    li:first-child {
+      float: left;
+      color: whitesmoke;
+      padding: 14px 16px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 80px;
+      padding: 20px;
+    }
+
+    .card {
+      width: 220px;
+      background-color: transparent;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      text-decoration: none;
+      color: white;
+      transition: 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .card-text {
+      padding: 10px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar with working links -->
+  <ul>
+    <li>Vehicle</li>
+    <li><a href="/login">Logout</a></li>
+    <li><a href="/dashboard">Home</a></li>
+  </ul>
+
+  <div class="container">
+    <a href="/cars" class="card">
+      <img src="/static/car.jpg" alt="Cars">
+      <div class="card-text">Cars</div>
+    </a>
+
+    <a href="/bikes" class="card">
+      <img src="/static/bike.jpg" alt="Bikes">
+      <div class="card-text">Bikes</div>
+    </a>
+
+    <a href="/carspares" class="card">
+      <img src="/static/carspare.jpg" alt="Car Spare Parts">
+      <div class="card-text">Car Spare Parts</div>
+    </a>
+
+    <a href="/bikespares" class="card">
+      <img src="/static/bikespare.jpg" alt="Bike Spare Parts">
+      <div class="card-text">Bike Spare Parts</div>
+    </a>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Car Spare Parts</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card a {
+      text-decoration: none;
+      color: #007BFF;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Car Spare Parts</h1>
+  <div class="card-container">
+    <div class="card">
+      <a href="https://www.marutisuzuki.com/genuine-parts" target="_blank">Maruti Suzuki Genuine Parts</a>
+    </div>
+    <div class="card">
+      <a href="https://www.hyundai.com/in/en/shop/genuine-parts" target="_blank">Hyundai Spare Parts</a>
+    </div>
+    <div class="card">
+      <a href="https://tgpindia.com/" target="_blank">Tata Genuine Parts</a>
+    </div>
+    <div class="card">
+      <a href="https://www.hondacarindia.com/genuine-parts" target="_blank">Honda Car Parts</a>
+    </div>
+    <div class="card">
+      <a href="https://www.mahindragenuineparts.com/" target="_blank">Mahindra Spare Parts</a>
+    </div>
+    <div class="card">
+      <a href="https://www.toyotabharat.com/inen/forms/genuine-parts.aspx" target="_blank">Toyota Genuine Parts</a>
+    </div>
+  </div>
+  <div style="text-align: center; margin-top: 20px;">
+    <a href="{{ url_for('index') }}">← Back to Home</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bikes Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    .navbar {
+      background-color: black;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    .navbar h2 {
+      margin: 0;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+
+    .navbar a:hover {
+      text-decoration: underline;
+    }
+
+    .search-container {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .search-container input {
+      width: 50%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    .company-section {
+      margin: 30px;
+    }
+
+    .company-section h3 {
+      margin-bottom: 15px;
+    }
+
+    .bike-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: flex-start;
+    }
+
+    .bike-card {
+      width: 220px;
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .bike-card:hover {
+      transform: scale(1.05);
+    }
+
+    .bike-card img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+    }
+
+    .bike-card p {
+      margin: 10px;
+      font-weight: bold;
+    }
+
+    .visit-btn {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 15px;
+    }
+
+    .visit-btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <h2>Bikes</h2>
+    <div>
+      <a href="{{ url_for('bikespares') }}">bike Spare Parts</a>
+      <a href="{{ url_for('index') }}">Home</a>
+    </div>
+  </div>
+
+  <!-- Search Bar -->
+  <div class="search-container">
+    <input type="text" placeholder="Search for Bikes...">
+  </div>
+
+  <!-- Maruti -->
+  <div class="company-section">
+    <h3>Suziki</h3>
+    <div class="bike-grid">
+      <div class="bike-card"><img src="https://img.autocarindia.com/model/uploads/modelimages/Suzuki-Gixxer-SF-130120211601.jpg?w=373&h=245&q=75&c=1"alt="Suzuki Gixxer SF"><p>Suzuki Gixxer SF</p></div>
+      <div class="bike-card"><img src="https://img.autocarindia.com/model/uploads/modelimages/Suzuki-Access-125-100320251038.jpg?w=373&h=245&q=75&c=1"alt="Suzuki Access 125"><p>Suzuki Access 125</p></div>
+      <div class="bike-card"><img src="https://img.autocarindia.com/model/uploads/modelimages/Suzuki-Gixxer-SF-250-130120211600.jpg?w=373&h=245&q=75&c=1"alt="Suzuki Gixxer SF 250"><p>Suzuki Gixxer SF 250</p></div>
+      <div class="bike-card"><img src="https://img.autocarindia.com/model/uploads/modelimages/Suzuki-V-Strom-SX-080420221404.jpg?w=373&h=245&q=75&c=1"alt="Suzuki V-Strom SX"><p>Suzuki V-Strom SX</p></div>
+    </div>
+    <a href="https://www.suzukimotorcycle.co.in/" target="_blank" class="visit-btn">Visit Suziki Website</a>
+  </div>
+
+</body>
+</html>
